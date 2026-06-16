@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class FirstController {
+public class MusicController {
 
     @Value("${creator.name}")
     private String creator;
