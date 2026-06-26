@@ -1,5 +1,8 @@
 package com.springlearn.ourspring.music;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Carnatic implements  Music{
     @Override
     public String getMusicTheme() {
