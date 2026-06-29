@@ -25,8 +25,9 @@ public class OurspringApplication {
 		};
 	}
 
-	@Autowired
 	public void saveMusic(MusicDaoImpl theMusicDao) {
+
+		System.out.println("Executing command line runner!!");
 		
 		// Create a new Music
 		Music newMusic = new Music("Juda Hokai Bhi", "Pritam", "2026-01-01");
