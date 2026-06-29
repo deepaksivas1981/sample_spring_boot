@@ -1,5 +1,5 @@
 package com.springlearn.ourspring.music;
 
-public interface Music {
+public interface Musical {
     String getMusicTheme();
 }

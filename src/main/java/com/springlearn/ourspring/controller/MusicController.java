@@ -1,7 +1,8 @@
 package com.springlearn.ourspring.controller;
 
 import com.springlearn.ourspring.music.Carnatic;
-import com.springlearn.ourspring.music.Music;
+import com.springlearn.ourspring.music.Musical;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,13 +18,13 @@ public class MusicController {
     @Value("${creator.company}")
     private String creatorCompany;
 
-    private Music music;
-    private Music anotherMusic;
+    private Musical music;
+    private Musical anotherMusic;
 
     @Autowired
     MusicController(
-            @Qualifier("carnatic") Music theMusic,
-            @Qualifier("carnatic") Music anotherMusic) {
+            @Qualifier("carnatic") Musical theMusic,
+            @Qualifier("carnatic") Musical anotherMusic) {
         this.music = theMusic;
         this.anotherMusic = anotherMusic;
     }

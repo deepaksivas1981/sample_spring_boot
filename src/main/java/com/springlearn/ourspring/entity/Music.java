@@ -1,7 +1,6 @@
 package com.springlearn.ourspring.entity;
 
 import jakarta.persistence.*;
-import jdk.jfr.Name;
 import lombok.Data;
 
 @Entity
@@ -22,4 +21,10 @@ public class Music {
 
     @Column(name="release_date")
     private String releaseDate;
+
+    public Music(String name, String author, String releaseDate) {
+        this.name = name;
+        this.author = author;
+        this.releaseDate = releaseDate;
+    }
 }

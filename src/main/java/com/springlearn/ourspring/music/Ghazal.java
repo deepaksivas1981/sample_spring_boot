@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Primary
 @Component
-public class Ghazal implements  Music{
+public class Ghazal implements  Musical{
 
     Ghazal() {
         System.out.println("Starting class " + getClass().getName());

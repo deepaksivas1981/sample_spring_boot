@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-public class Carnatic implements  Music{
+public class Carnatic implements  Musical{
 
     Carnatic() {
         System.out.println("Starting class " + getClass().getName());
