@@ -20,7 +20,8 @@ public class OurspringApplication {
 	@Bean
 	public CommandLineRunner commandLineRunner(MusicDaoImpl theMusicDao) {
 		return runner -> {
-			saveMusic(theMusicDao);
+			// saveMusic(theMusicDao);
+			readMusic(theMusicDao);
 			// System.out.println("Hello World!!");
 		};
 	}
@@ -36,6 +37,22 @@ public class OurspringApplication {
 		theMusicDao.save(newMusic);
 
 		System.out.println("The music is saved!!");
+	}
+
+	public void readMusic(MusicDaoImpl theMusicDao) {
+		// Create a new Music
+		Music newMusic = new Music("Toh Phir Aao", "Pritam", "2026-01-01");
+
+		// Get the music Id
+
+		// Save the music
+		theMusicDao.save(newMusic);
+
+		// Given music ID
+		System.out.println("New music id " + newMusic.getId());
+
+		// Display
+		System.out.println("Saved music : " + theMusicDao.getMusic(newMusic.getId()));
 	}
 
 }

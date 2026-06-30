@@ -22,6 +22,9 @@ public class Music {
     @Column(name="release_date")
     private String releaseDate;
 
+    public Music() {
+    }
+
     public Music(String name, String author, String releaseDate) {
         this.name = name;
         this.author = author;

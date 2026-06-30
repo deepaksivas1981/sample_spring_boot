@@ -25,4 +25,10 @@ public class MusicDaoImpl implements MusicDao{
         
     }
 
+    @Override
+    public Music getMusic(long id) {
+        
+        return this.entityManager.find(Music.class, id);
+    }
+
 }
