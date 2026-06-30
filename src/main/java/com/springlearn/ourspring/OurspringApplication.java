@@ -21,7 +21,8 @@ public class OurspringApplication {
 	public CommandLineRunner commandLineRunner(MusicDaoImpl theMusicDao) {
 		return runner -> {
 			// saveMusic(theMusicDao);
-			readMusic(theMusicDao);
+			// readMusic(theMusicDao);
+			getAllMusic(theMusicDao);
 			// System.out.println("Hello World!!");
 		};
 	}
@@ -53,6 +54,10 @@ public class OurspringApplication {
 
 		// Display
 		System.out.println("Saved music : " + theMusicDao.getMusic(newMusic.getId()));
+	}
+
+	public void getAllMusic(MusicDaoImpl theMusicDao) {
+		System.out.println("List of all music " + theMusicDao.getAllMusic());
 	}
 
 }
