@@ -1,7 +1,11 @@
 package com.springlearn.ourspring.controller;
 
+import com.springlearn.ourspring.entity.Music;
 import com.springlearn.ourspring.music.Carnatic;
 import com.springlearn.ourspring.music.Musical;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -29,14 +33,14 @@ public class MusicController {
         this.anotherMusic = anotherMusic;
     }
 
-    @GetMapping("/")
-    public String getMessage() {
+     @GetMapping("/")
+     public String getMessage() {
 
-        return music.getMusicTheme();
-    }
+         return music.getMusicTheme();
+     }
 
-    @GetMapping("/check")
-    public String checkClass() {
-        return "Music is same ? " + ( this.music == this.anotherMusic );
-    }
+     @GetMapping("/check")
+     public String checkClass() {
+         return "Music is same ? " + ( this.music == this.anotherMusic );
+     }
 }

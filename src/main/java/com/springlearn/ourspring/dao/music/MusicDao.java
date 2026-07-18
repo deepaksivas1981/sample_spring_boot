@@ -1,6 +1,7 @@
 package com.springlearn.ourspring.dao.music;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.springlearn.ourspring.entity.Music;
 
@@ -11,4 +12,14 @@ public interface MusicDao {
     public Music getMusic(long id);
 
     public List<Music> getAllMusic();
+
+    public Optional<Music> updateMusicTitle(String title, int id);
+
+    public void updateAllAuthor(String author);
+
+    public void deleteById(int id);
+
+    public void deleteAll();
+
+    public void deleteByAuthor(String author);
 }
