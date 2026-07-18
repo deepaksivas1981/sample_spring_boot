@@ -19,7 +19,7 @@ public class DirectorController {
     }
 
     // Get all the director
-    @GetMapping("")
+    @GetMapping
     public List<Director> getAllDirector() {
         return this.musicService.getAllDirectors();
     }
@@ -28,6 +28,13 @@ public class DirectorController {
     @GetMapping("/{directorId}")
     public Director getDirector(@PathVariable int directorId) {
         return this.musicService.getDirector(directorId);
+    }
+
+    // Add a director
+    @PostMapping
+    public Director createDirector(@RequestBody Director director) {
+        System.out.println("Trying to save the director!!");
+        return this.musicService.saveDirector(director);
     }
 
 }

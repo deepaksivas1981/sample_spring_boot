@@ -3,6 +3,7 @@ package com.springlearn.ourspring.service;
 import com.springlearn.ourspring.dao.music.MusicDaoImpl;
 import com.springlearn.ourspring.entity.Director;
 import com.springlearn.ourspring.repository.DirectorJPA;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,9 +34,10 @@ public class MusicServiceImpl implements MusicService{
         return director.orElseThrow(() -> new RuntimeException("The director " + directorId + " is not available."));
     }
 
+    @Transactional
     @Override
     public Director saveDirector(Director theDirector) {
-        return null;
+        return this.directorJpa.save(theDirector);
     }
 
     @Override
