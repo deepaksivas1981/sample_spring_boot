@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RequestMapping("/api/directors")
 @RestController
@@ -34,8 +35,19 @@ public class DirectorController {
     // Fails due to Sprint security
     @PostMapping
     public Director createDirector(@RequestBody Director director) {
-        System.out.println("Trying to save the director!!");
         return this.musicService.saveDirector(director);
+    }
+
+    // Delete director
+    @DeleteMapping("/{directorId}")
+    public boolean deleteDirector(@PathVariable int directorId) {
+        return this.musicService.deleteDirector(directorId);
+    }
+
+    // Update Director
+    @PatchMapping("/{directorId}")
+    public Director patchDirector(@PathVariable int directorId, @RequestBody Map<String, Object> objectPayload) {
+        return this.musicService.updateDirector(directorId, objectPayload);
     }
 
 }

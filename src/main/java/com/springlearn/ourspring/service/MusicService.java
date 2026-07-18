@@ -18,6 +18,6 @@ public interface MusicService {
 
     Director updateDirector(int directorId, Map<String, Object> patchPayload);
 
-    boolean deleteDirector(int id);
+    boolean deleteDirector(int directorId);
 
 }
