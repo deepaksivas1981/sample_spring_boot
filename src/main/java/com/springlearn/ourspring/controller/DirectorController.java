@@ -31,6 +31,7 @@ public class DirectorController {
     }
 
     // Add a director
+    // Fails due to Sprint security
     @PostMapping
     public Director createDirector(@RequestBody Director director) {
         System.out.println("Trying to save the director!!");
